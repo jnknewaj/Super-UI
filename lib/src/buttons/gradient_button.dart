@@ -33,7 +33,7 @@ class GradientButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius)),
         padding: const EdgeInsets.all(0.0),

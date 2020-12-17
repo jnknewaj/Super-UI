@@ -1,14 +1,25 @@
 # super_ui
 
-A new Flutter package project.
+A flutter package containing a range of different widgets.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+** Buttons **
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+1. GradientButton : Button with gradient effect.
+2. IcButton : Button with icon.
+3. SuperButton : Supports almost all important property that a fancy button should have.
+
+** Images **
+
+1. CircularImageHolder : Circular widget for fetching both network image and file image.
+
+** Others **
+
+1. BillboardText : A widget to show highlighed text (Normal, Error, Warning).
+2. Bubble
+3. Glowing Stars
+
+** TextFields **
+
+1. EditText : Simple TextFormField, but easier to use.

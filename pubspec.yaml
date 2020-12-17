@@ -1,8 +1,8 @@
 name: super_ui
-description: A new Flutter package project.
+description: Package For Commonly Used Customed Widget.
 version: 0.0.1
-author:
-homepage:
+author: Newaj Kabir
+homepage: https://github.com/jnknewaj/Super-UI
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

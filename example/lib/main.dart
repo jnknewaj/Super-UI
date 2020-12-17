@@ -1,3 +1,4 @@
+import 'package:example/ex_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:super_ui/super_ui.dart';
 
@@ -45,7 +46,9 @@ class MyHomePage extends StatelessWidget {
             IcButton(
               icon: Icons.add,
               text: 'Hello',
-              onPressed: () {},
+              onPressed: () {
+                print('navigating');
+              },
               buttonColor: Colors.orange,
               fontSize: 30.0,
               iconColor: Colors.blue,
@@ -54,7 +57,9 @@ class MyHomePage extends StatelessWidget {
             ),
             SuperButton(
               text: 'Super UI',
-              onPressed: () {},
+              onPressed: () {
+                print('navigating');
+              },
               borderRadius: 0.0,
               buttonColor: Colors.teal,
               elevation: 5.0,
@@ -68,11 +73,16 @@ class MyHomePage extends StatelessWidget {
                 begin: Alignment.topCenter,
                 colors: [Colors.blue, Colors.white],
               ),
-              text: 'Hello',
+              text: 'Next',
               borderRadius: 0,
               height: 50.0,
               width: 100,
               textColor: Colors.white,
+              onPressed: () {
+                print('navigating');
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ExTextField()));
+              },
             ),
           ],
         ),
