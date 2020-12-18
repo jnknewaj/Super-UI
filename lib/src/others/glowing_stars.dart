@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:super_ui/src/others/bubble.dart';
 
 class GlowingStars extends StatelessWidget {
-
-  /// Creates stars like glowing. Better to use in Positioned widget.
+  /// Creates stars like glowing in light white color. Better to use in Positioned widget.
   const GlowingStars();
 
   @override

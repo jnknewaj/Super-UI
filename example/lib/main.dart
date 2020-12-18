@@ -1,4 +1,3 @@
-import 'package:example/ex_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:super_ui/super_ui.dart';
 
@@ -27,62 +26,52 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Super UI'),
       ),
-      body: Center(
-        child: ListView(
+      body: Container(
+        color: Colors.blue[400],
+        child: Stack(
           children: [
-            CircularImageHolder(
-              imageUrl:
-                  'https://lh3.googleusercontent.com/--5H57B8aG4-DX9s79Spo3ygrsI9NMFnZo1uTZzs5s5AeeOvmiy81k__tu9r7JbRTTLzryK-oUy0UREclmD_qfV81VvaT4K9jJa8gg',
-              imageSize: 0.3,
+            ListView(
+              children: [
+                CircularImageHolder(
+                  imageUrl: null,
+                  imageSize: 0.5,
+                  icon: Icons.add,
+                ),
+                SizedBox(height: 10.0),
+                GradientButton(
+                  gradient: LinearGradient(colors: [
+                    Colors.blue,
+                    Colors.blueGrey,
+                  ]),
+                  text: 'Gradient Button',
+                  textColor: Colors.white,
+                  onPressed: () {},
+                  width: 150.0,
+                ),
+                SizedBox(height: 10.0),
+                IcButton(
+                  icon: Icons.add_a_photo,
+                  text: "IcButton",
+                  buttonColor: Colors.blue,
+                  textColor: Colors.white,
+                  iconColor: Colors.white,
+                  width: 150.0,
+                ),
+                SizedBox(height: 10.0),
+                SuperButton(
+                  text: 'Super Button',
+                  onPressed: () {},
+                  buttonColor: Colors.red[600],
+                  textColor: Colors.white,
+                  width: 140.0,
+                ),
+              ],
             ),
-            BillboardText(
-              text: 'Hello Super UI',
-              textType: TextType.error,
-              boardColor: Colors.teal,
-              borderColor: Colors.black,
-              boardHeight: 200.0,
-            ),
-            SizedBox(height: 30.0),
-            IcButton(
-              icon: Icons.add,
-              text: 'Hello',
-              onPressed: () {
-                print('navigating');
-              },
-              buttonColor: Colors.orange,
-              fontSize: 30.0,
-              iconColor: Colors.blue,
-              textColor: Colors.blue,
-              width: 150.0,
-            ),
-            SuperButton(
-              text: 'Super UI',
-              onPressed: () {
-                print('navigating');
-              },
-              borderRadius: 0.0,
-              buttonColor: Colors.teal,
-              elevation: 5.0,
-              textColor: Colors.white,
-              textSize: 20.0,
-              height: 30.0,
-              width: 150.0,
-            ),
-            GradientButton(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                colors: [Colors.blue, Colors.white],
-              ),
-              text: 'Next',
-              borderRadius: 0,
-              height: 50.0,
-              width: 100,
-              textColor: Colors.white,
-              onPressed: () {
-                print('navigating');
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ExTextField()));
-              },
+            Positioned(
+              left: 180,
+              right: 0,
+              bottom: 80.0,
+              child: GlowingStars(),
             ),
           ],
         ),

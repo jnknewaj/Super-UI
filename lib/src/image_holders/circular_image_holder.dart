@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:super_ui/src/res/strings/super_ui_strings.dart';
 
@@ -15,10 +14,10 @@ class CircularImageHolder extends StatelessWidget {
 
   /// Color for icon, default is white.
   final Color iconColor;
-  
+
   /// Color for icon background, default is light blue.
   final Color iconBackgroundColor;
-  
+
   final Function() onImageAdded;
 
   /// [imageSize] Should be in between 0.1 and 1.0
@@ -64,7 +63,10 @@ class CircularImageHolder extends StatelessWidget {
             ),
           ),
           icon == null
-              ? Container()
+              ? Container(
+                  width: 0.0,
+                  height: 0.0,
+                )
               : Positioned(
                   bottom: 0.0,
                   right: 0.0,
