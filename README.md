@@ -1,11 +1,11 @@
 # super_ui
-[![Pub Version](https://img.shields.io/pub/v/super_ui?color=cyan&logo=flutter)]()https://https://pub.dev/packages/super_ui
+[![Pub Version](https://img.shields.io/pub/v/super_ui?color=cyan&logo=flutter)](https://https://pub.dev/packages/super_ui)
 
 A flutter package containing a range of different widgets.
 
 ## Getting Started
 
-1) add this to your packages pubspec.yaml file:
+1) add this to your pubspec.yaml file:
 ```yaml
 dependencies:
   super_ui: ^0.0.2
@@ -16,7 +16,7 @@ $ flutter pub get
 ```
 3) Import:
 ```dart
-import 'package:auth_buttons/auth_buttons.dart';
+import 'package:auth_buttons/super_ui.dart';
 ```
 
 # Some of the widgets
@@ -53,7 +53,7 @@ AuthButton(
 ),
 ```
 
-![Example 4](assets/readme_images/circular_image.png)
+![Example 4](assets/readme_images/mini_auth_buttons.png)
 
 ## Others
 
