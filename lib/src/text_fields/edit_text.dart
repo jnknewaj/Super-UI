@@ -19,9 +19,13 @@ class EditText extends StatelessWidget {
   final ValueChanged<String> onChanged;
   final FormFieldValidator<String> validator;
   final int maxLength;
+  final int maxLine, minLine;
 
   /// Default is false
   final bool obscureText;
+
+  /// Default is TextInputType.text
+  final TextInputType textInputType;
 
   /// Creates TextFormField
   const EditText({
@@ -43,6 +47,9 @@ class EditText extends StatelessWidget {
     this.validator,
     this.maxLength,
     this.obscureText = false,
+    this.minLine,
+    this.maxLine,
+    this.textInputType = TextInputType.text,
   }) : super(key: key);
 
   @override
@@ -75,6 +82,10 @@ class EditText extends StatelessWidget {
         validator: validator,
         maxLength: maxLength,
         obscureText: obscureText,
+        controller: controller,
+        keyboardType: textInputType,
+        maxLines: maxLine,
+        minLines: minLine,
       ),
     );
   }
