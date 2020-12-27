@@ -6,3 +6,7 @@
 
  * Added social auth buttons.
  * Improved CircularImageHolder widget.
+
+## 0.0.3 , December 27, 2020
+
+ * Fixed a bug on EditText.
