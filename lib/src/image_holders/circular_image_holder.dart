@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:super_ui/src/res/strings/super_ui_strings.dart';
@@ -72,9 +73,19 @@ class CircularImageHolder extends StatelessWidget {
                   aspectRatio: 1.0,
                   child: assetImagePath == null
                       ? imageFile == null
-                          ? Image.network(
-                              imageUrl ?? SuperUiString.defaultImageUrl,
+                          ? CachedNetworkImage(
+                              imageUrl:
+                                  imageUrl ?? SuperUiString.defaultImageUrl,
+                              progressIndicatorBuilder:
+                                  (context, url, downloadProgress) =>
+                                      LinearProgressIndicator(
+                                value: downloadProgress.progress,
+                              ),
+                              errorWidget: (context, url, error) =>
+                                  Icon(Icons.error),
                               fit: BoxFit.fill,
+                              fadeInCurve: Curves.bounceIn,
+                              fadeInDuration: Duration(milliseconds: 1000),
                             )
                           : Image.file(
                               imageFile,

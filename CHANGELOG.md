@@ -10,3 +10,7 @@
 ## 0.0.3 , December 27, 2020
 
  * Fixed a bug on EditText.
+
+## 0.0.4 , April 04, 2021
+
+ * Added cahing support for image.
