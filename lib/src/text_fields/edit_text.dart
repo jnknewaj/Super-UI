@@ -13,13 +13,14 @@ class EditText extends StatelessWidget {
   final String labelText;
   final String helperText;
   final Color helperColor;
-  final IconData prefixIcon;
-  final IconData suffixIcon;
+  final Icon prefixIcon;
+  final Icon suffixIcon;
   final TextEditingController controller;
   final ValueChanged<String> onChanged;
   final FormFieldValidator<String> validator;
   final int maxLength;
   final int maxLine, minLine;
+  final TextInputAction textInputAction;
 
   /// Default is false
   final bool obscureText;
@@ -50,12 +51,14 @@ class EditText extends StatelessWidget {
     this.minLine,
     this.maxLine,
     this.textInputType = TextInputType.text,
+    this.textInputAction = TextInputAction.next,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.only(
+          left: 18.0, right: 18.0, bottom: 12.0, top: 15.0),
       child: TextFormField(
         style: TextStyle(color: textColor),
         decoration: InputDecoration(
@@ -67,16 +70,17 @@ class EditText extends StatelessWidget {
             borderRadius: BorderRadius.circular(borderRadius),
             borderSide: BorderSide(color: borderColor),
           ),
+          // ignore: avoid_bool_literals_in_conditional_expressions
           filled: backgroundColor == null ? false : true,
-          fillColor: Colors.blue,
+          fillColor: backgroundColor,
           hintText: hintText,
           hintStyle: TextStyle(color: hintColor),
           labelText: labelText,
           labelStyle: TextStyle(color: labelColor),
           helperText: helperText,
           helperStyle: TextStyle(color: helperColor),
-          prefixIcon: Icon(prefixIcon),
-          suffixIcon: Icon(suffixIcon),
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
         ),
         onChanged: onChanged,
         validator: validator,
@@ -86,6 +90,7 @@ class EditText extends StatelessWidget {
         keyboardType: textInputType,
         maxLines: maxLine,
         minLines: minLine,
+        textInputAction: textInputAction,
       ),
     );
   }

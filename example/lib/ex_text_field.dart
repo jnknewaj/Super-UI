@@ -14,7 +14,7 @@ class ExTextField extends StatelessWidget {
             hintText: 'This Is Hint',
             labelText: 'Label',
             helperText: 'Helper Text',
-            prefixIcon: Icons.email,
+            prefixIcon: Icon(Icons.email),
           ),
         ),
       ),

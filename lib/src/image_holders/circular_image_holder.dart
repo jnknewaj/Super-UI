@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
 import 'package:super_ui/src/res/strings/super_ui_strings.dart';
 
 class CircularImageHolder extends StatelessWidget {
