@@ -14,19 +14,19 @@ class BillboardText extends StatelessWidget {
   final TextType textType;
 
   /// Default is Pink
-  final Color boardColor;
+  final Color? boardColor;
 
   /// Default is white
-  final Color borderColor;
+  final Color? borderColor;
 
   /// Default is 100
-  final double boardHeight;
+  final double? boardHeight;
 
   /// Creates a billboard with a text at the center
   const BillboardText({
-    Key key,
-    @required this.text,
-    @required this.textType,
+    Key? key,
+    required this.text,
+    required this.textType,
     this.boardColor,
     this.borderColor,
     this.boardHeight
@@ -40,7 +40,7 @@ class BillboardText extends StatelessWidget {
       margin: const EdgeInsets.all(30.0),
       decoration: BoxDecoration(
         border: Border.all(
-          color: borderColor == null ? Colors.pink : borderColor,
+          color: borderColor == null ? Colors.pink : borderColor!,
           width: 3.0,
         ),
         color: boardColor == null ? Colors.white : boardColor,
@@ -56,7 +56,7 @@ class BillboardText extends StatelessWidget {
                     ? Colors.orange
                     : Colors.green,
             fontWeight: FontWeight.bold,
-            fontSize: Theme.of(context).textTheme.headline5.fontSize),
+            fontSize: Theme.of(context).textTheme.headline5!.fontSize),
         maxLines: 3,
         overflow: TextOverflow.ellipsis,
       ),

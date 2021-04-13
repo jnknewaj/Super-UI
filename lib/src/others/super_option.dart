@@ -11,18 +11,18 @@ class SuperOption extends HookWidget {
   final String initialSelection;
 
   /// Default is primary color from theme.
-  final Color selectedColor;
+  final Color? selectedColor;
 
   /// Background color when chip is not selected
-  final Color backgroundColor;
-  final ValueSetter<String> callback;
+  final Color? backgroundColor;
+  final ValueSetter<String>? callback;
 
   /// Creates two chips rectangle in shape
   const SuperOption({
-    Key key,
-    @required this.text1,
-    @required this.text2,
-    @required this.initialSelection,
+    Key? key,
+    required this.text1,
+    required this.text2,
+    required this.initialSelection,
     this.selectedColor,
     this.backgroundColor,
     this.callback,
@@ -47,7 +47,7 @@ class SuperOption extends HookWidget {
           ),
           onSelected: (_) {
             selectedChoice.value = text1;
-            callback(selectedChoice.value);
+            callback!(selectedChoice.value);
           },
           selectedColor: selectedColor ?? Theme.of(context).primaryColor,
           backgroundColor: backgroundColor,
@@ -63,7 +63,7 @@ class SuperOption extends HookWidget {
           ),
           onSelected: (_) {
             selectedChoice.value = text2;
-            callback(selectedChoice.value);
+            callback!(selectedChoice.value);
           },
           selectedColor: selectedColor ?? Theme.of(context).primaryColor,
           backgroundColor: backgroundColor,

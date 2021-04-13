@@ -14,3 +14,7 @@
 ## 0.0.4 , April 04, 2021
 
  * Added cahing support for image.
+
+## 0.0.4 , April 13, 2021
+
+ * Migrated To Null Safety.

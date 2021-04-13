@@ -32,8 +32,6 @@ class FluidalShape extends CustomPainter {
     );
     path.lineTo(size.width, size.height * 0.17);
 
-    // TODO: Draw your path
-
     canvas.drawPath(path, paint);
   }
 
@@ -73,12 +71,9 @@ class FluidalShapeTwo extends CustomPainter {
     );
     path.lineTo(size.width, size.height * 0.17);
 
-    // TODO: Draw your path
-
     canvas.drawPath(path, paint);
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
-

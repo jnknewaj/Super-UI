@@ -1,7 +1,7 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 
 class Helper {
   static Size screenSize(BuildContext context) {
@@ -9,8 +9,9 @@ class Helper {
   }
 
   static Future<File> pickImageFromGallery() async {
-    final image = await ImagePicker.pickImage(source: ImageSource.gallery);
-    return image;
+    final picker = ImagePicker();
+    final imageFile = await (picker.getImage(source: ImageSource.gallery) as FutureOr<PickedFile>);
+    return File(imageFile.path);
   }
 
   static bool isNullOrEmpty(Object o) => o == null || "" == o;
@@ -39,7 +40,7 @@ class Helper {
     return (screenSize(context).width * time) - reducedBy;
   }
 
-  static void logPrint(String tag, [String message]) {
+  static void logPrint(String tag, [String? message]) {
     debugPrint("$tag  ::  $message");
   }
 }

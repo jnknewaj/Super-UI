@@ -5,28 +5,28 @@ import 'package:super_ui/src/res/strings/super_ui_strings.dart';
 
 class CircularImageHolder extends StatelessWidget {
   /// Provide imageFile if the source of image is a file instead of url.
-  final File imageFile;
+  final File? imageFile;
 
   /// If imageUrl is null, will show a default image from network.
-  final String imageUrl;
+  final String? imageUrl;
 
-  final String assetImagePath;
+  final String? assetImagePath;
 
   /// Icon at the right bottom corner of the image.
-  final IconData icon;
+  final IconData? icon;
 
   /// Color for icon, default is white.
-  final Color iconColor;
+  final Color? iconColor;
 
   /// Color for icon background, default is light blue.
-  final Color iconBackgroundColor;
+  final Color? iconBackgroundColor;
 
   /// Needed for images with transparent background. Default is white.
-  final Color imageBackgroundColor;
+  final Color? imageBackgroundColor;
 
-  final Function() onImageAdded;
+  final Function()? onImageAdded;
 
-  final Function onPressed;
+  final Function? onPressed;
 
   /// [imageSize] Should be in between 0.1 and 1.0
   final double imageSize;
@@ -39,7 +39,7 @@ class CircularImageHolder extends StatelessWidget {
   ///
   /// Can use an optional icon with the image
   const CircularImageHolder({
-    Key key,
+    Key? key,
     this.imageFile,
     this.imageUrl,
     this.assetImagePath,
@@ -49,7 +49,7 @@ class CircularImageHolder extends StatelessWidget {
     this.imageBackgroundColor = Colors.white,
     this.onImageAdded,
     this.onPressed,
-    @required this.imageSize,
+    required this.imageSize,
   }) : super(key: key);
 
   @override
@@ -58,7 +58,7 @@ class CircularImageHolder extends StatelessWidget {
     double iconSizeFactor = imageSizeFactor * 0.2;
     return Align(
       child: InkWell(
-        onTap: onPressed,
+        onTap: onPressed as void Function()?,
         child: Stack(
           children: <Widget>[
             Container(
@@ -86,11 +86,11 @@ class CircularImageHolder extends StatelessWidget {
                               fadeInDuration: Duration(milliseconds: 1000),
                             )
                           : Image.file(
-                              imageFile,
+                              imageFile!,
                               fit: BoxFit.fill,
                             )
                       : Image.asset(
-                          assetImagePath,
+                          assetImagePath!,
                           fit: BoxFit.fill,
                           package: 'super_ui',
                         ),

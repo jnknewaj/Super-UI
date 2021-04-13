@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
 class EditText extends StatelessWidget {
-  final Color textColor;
+  final Color? textColor;
 
   /// Default is 0
   final double borderRadius;
   final Color borderColor;
-  final Color backgroundColor;
-  final Color labelColor;
-  final Color hintColor;
-  final String hintText;
-  final String labelText;
-  final String helperText;
-  final Color helperColor;
-  final Icon prefixIcon;
-  final Icon suffixIcon;
-  final TextEditingController controller;
-  final ValueChanged<String> onChanged;
-  final FormFieldValidator<String> validator;
-  final int maxLength;
-  final int maxLine, minLine;
+  final Color? backgroundColor;
+  final Color? labelColor;
+  final Color? hintColor;
+  final String? hintText;
+  final String? labelText;
+  final String? helperText;
+  final Color? helperColor;
+  final Icon? prefixIcon;
+  final Icon? suffixIcon;
+  final TextEditingController? controller;
+  final ValueChanged<String>? onChanged;
+  final FormFieldValidator<String>? validator;
+  final int? maxLength;
+  final int? maxLine, minLine;
   final TextInputAction textInputAction;
 
   /// Default is false
@@ -30,7 +30,7 @@ class EditText extends StatelessWidget {
 
   /// Creates TextFormField
   const EditText({
-    Key key,
+    Key? key,
     this.textColor,
     this.borderRadius = 0.0,
     this.borderColor = Colors.grey,

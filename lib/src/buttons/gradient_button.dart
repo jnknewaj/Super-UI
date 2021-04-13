@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
   final Gradient gradient;
-  final Function onPressed;
+  final Function? onPressed;
   final String text;
 
   /// Default is black.
@@ -19,10 +19,10 @@ class GradientButton extends StatelessWidget {
 
   /// Creates a button with the given gradient effect.
   const GradientButton({
-    Key key,
-    @required this.gradient,
+    Key? key,
+    required this.gradient,
     this.onPressed,
-    @required this.text,
+    required this.text,
     this.textColor = Colors.black,
     this.height = 40,
     this.width = 90,
@@ -33,7 +33,7 @@ class GradientButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       child: RaisedButton(
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius)),
         padding: const EdgeInsets.all(0.0),

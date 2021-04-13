@@ -13,28 +13,28 @@ enum SocialItem {
 
 /// For internal use of the package itself
 class ButtonBuilder extends StatelessWidget {
-  final String imagePath;
-  final String text;
+  final String? imagePath;
+  final String? text;
 
   /// Background color. Default is white.
-  final Color color;
-  final Color imageBackgroundColor;
-  final Color textColor;
+  final Color? color;
+  final Color? imageBackgroundColor;
+  final Color? textColor;
   final double borderRadius;
   final Function onPressed;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final bool mini;
 
   const ButtonBuilder({
-    Key key,
+    Key? key,
     this.imagePath,
     this.text,
     this.color = Colors.white,
     this.imageBackgroundColor,
     this.textColor,
     this.borderRadius = 0.0,
-    @required this.onPressed,
+    required this.onPressed,
     this.width,
     this.height,
     this.mini = false,
@@ -79,7 +79,7 @@ class ButtonBuilder extends StatelessWidget {
             ],
           ),
         ),
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
       ),
     );
   }
@@ -98,9 +98,9 @@ class AuthButton extends StatelessWidget {
   final bool mini;
 
   const AuthButton({
-    Key key,
-    @required this.item,
-    @required this.onPressed,
+    Key? key,
+    required this.item,
+    required this.onPressed,
     this.width = 220,
     this.height = 40,
     this.mini = false,
@@ -118,7 +118,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       case SocialItem.github:
         return ButtonBuilder(
           onPressed: onPressed,
@@ -131,7 +130,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       case SocialItem.google:
         return ButtonBuilder(
           onPressed: onPressed,
@@ -141,7 +139,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       case SocialItem.twitter:
         return ButtonBuilder(
           onPressed: onPressed,
@@ -153,7 +150,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       case SocialItem.facebook:
         return ButtonBuilder(
           onPressed: onPressed,
@@ -165,7 +161,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       case SocialItem.microsoft:
         return ButtonBuilder(
           onPressed: onPressed,
@@ -176,7 +171,6 @@ class AuthButton extends StatelessWidget {
           width: width,
           mini: mini,
         );
-        break;
       default:
         return Container();
     }

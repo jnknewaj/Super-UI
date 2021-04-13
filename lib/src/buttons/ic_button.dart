@@ -11,7 +11,7 @@ class IcButton extends StatelessWidget {
   /// Default color for icon is white.
   final Color buttonColor;
 
-  final Function onPressed;
+  final Function? onPressed;
 
   /// Default is 140.0
   final double width;
@@ -24,8 +24,8 @@ class IcButton extends StatelessWidget {
 
   /// Creates a button with an icon and a text.
   IcButton({
-    @required this.icon,
-    @required this.text,
+    required this.icon,
+    required this.text,
     this.iconColor = Colors.black,
     this.buttonColor = Colors.white,
     this.onPressed,
@@ -39,7 +39,7 @@ class IcButton extends StatelessWidget {
     return Align(
       child: Material(
         child: InkWell(
-          onTap: onPressed,
+          onTap: onPressed as void Function()?,
           child: Container(
             color: buttonColor,
             width: width,

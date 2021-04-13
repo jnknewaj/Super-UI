@@ -10,8 +10,8 @@ class ListLoading extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Shimmer.fromColors(
-        baseColor: Colors.grey[300],
-        highlightColor: Colors.grey[100],
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
         child: ListView.builder(
           shrinkWrap: true,
           itemBuilder: (_, __) => Container(

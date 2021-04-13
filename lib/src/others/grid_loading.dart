@@ -8,8 +8,8 @@ class GridLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = Helper.screenHeightPortion(context, time: 0.20);
     return Shimmer.fromColors(
-      baseColor: Colors.grey[300],
-      highlightColor: Colors.grey[100],
+      baseColor: Colors.grey[300]!,
+      highlightColor: Colors.grey[100]!,
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

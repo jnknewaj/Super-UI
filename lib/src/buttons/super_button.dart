@@ -17,15 +17,15 @@ class SuperButton extends StatelessWidget {
 
   /// Default is 10.0
   final double elevation;
-  final Function onPressed;
+  final Function? onPressed;
 
   /// Default height and width 20 & 100 respectively.
   final double height, width;
 
   /// Creates a button where radius can be added
   SuperButton({
-    Key key,
-    @required this.text,
+    Key? key,
+    required this.text,
     this.textSize = 15.0,
     this.textColor = Colors.black,
     this.buttonColor = Colors.white,
@@ -42,7 +42,7 @@ class SuperButton extends StatelessWidget {
       child: RaisedButton(
         elevation: elevation,
         color: buttonColor,
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius)),
         padding: const EdgeInsets.all(0.0),
