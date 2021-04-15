@@ -72,8 +72,11 @@ class CircularImageHolder extends StatelessWidget {
                   child: assetImagePath == null
                       ? imageFile == null
                           ? CachedNetworkImage(
-                              imageUrl:
-                                  imageUrl ?? SuperUiString.defaultImageUrl,
+                              imageUrl: imageUrl == null
+                                  ? SuperUiString.defaultImageUrl
+                                  : imageUrl!.isEmpty
+                                      ? SuperUiString.defaultImageUrl
+                                      : imageUrl!,
                               progressIndicatorBuilder:
                                   (context, url, downloadProgress) =>
                                       LinearProgressIndicator(

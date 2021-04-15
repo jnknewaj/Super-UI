@@ -1,6 +1,6 @@
 name: super_ui
 description: Package for commonly used custom widget like buttons, imageholder etc. Aimed to ease the development of UI.
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/jnknewaj/Super-UI
 
 environment:
