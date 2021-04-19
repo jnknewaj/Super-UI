@@ -3,14 +3,15 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class Helper {
+class SuperHelper {
   static Size screenSize(BuildContext context) {
     return MediaQuery.of(context).size;
   }
 
   static Future<File> pickImageFromGallery() async {
     final picker = ImagePicker();
-    final imageFile = await (picker.getImage(source: ImageSource.gallery) as FutureOr<PickedFile>);
+    final imageFile = await (picker.getImage(source: ImageSource.gallery)
+        as FutureOr<PickedFile>);
     return File(imageFile.path);
   }
 
@@ -42,6 +43,19 @@ class Helper {
 
   static void logPrint(String tag, [String? message]) {
     debugPrint("$tag  ::  $message");
+  }
+
+  Future<bool> hasInternetConnection() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+        return true;
+      } else {
+        return false;
+      }
+    } on SocketException catch (_) {
+      return false;
+    }
   }
 }
 

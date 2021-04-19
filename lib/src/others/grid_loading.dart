@@ -6,7 +6,7 @@ class GridLoading extends StatelessWidget {
   const GridLoading();
   @override
   Widget build(BuildContext context) {
-    final height = Helper.screenHeightPortion(context, time: 0.20);
+    final height = SuperHelper.screenHeightPortion(context, time: 0.20);
     return Shimmer.fromColors(
       baseColor: Colors.grey[300]!,
       highlightColor: Colors.grey[100]!,

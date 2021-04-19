@@ -15,6 +15,10 @@
 
  * Added cahing support for image.
 
-## 0.0.4 , April 13, 2021
+## 0.0.5 , April 13, 2021
 
  * Migrated To Null Safety.
+
+## 0.0.7 , April 19, 2021
+
+ * Added data connection checker.

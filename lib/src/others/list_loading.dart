@@ -6,7 +6,7 @@ class ListLoading extends StatelessWidget {
   const ListLoading();
   @override
   Widget build(BuildContext context) {
-    final height = Helper.screenHeightPortion(context, time: 0.15);
+    final height = SuperHelper.screenHeightPortion(context, time: 0.15);
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Shimmer.fromColors(
