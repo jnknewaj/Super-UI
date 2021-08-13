@@ -36,14 +36,14 @@ class BillboardText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // todo make a screenutil
-      height: boardHeight == null ? 100.0 : boardHeight,
+      height: boardHeight ?? 100.0,
       margin: const EdgeInsets.all(30.0),
       decoration: BoxDecoration(
         border: Border.all(
           color: borderColor == null ? Colors.pink : borderColor!,
           width: 3.0,
         ),
-        color: boardColor == null ? Colors.white : boardColor,
+        color: boardColor ?? Colors.white,
       ),
       padding: const EdgeInsets.all(10.0),
       alignment: Alignment.center,

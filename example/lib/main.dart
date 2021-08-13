@@ -14,37 +14,36 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Super UI'),
+        title: const Text('Super UI'),
       ),
       body: ListView(
         children: [
-          CircularImageHolder(
-            imageUrl: null,
-            imageSize: 0.3,
-          ),
-          SizedBox(height: 10.0),
+          const CircularImageHolder(imageSize: 0.3),
+          const SizedBox(height: 10.0),
           GradientButton(
-            gradient: LinearGradient(colors: [
+            gradient: const LinearGradient(colors: [
               Colors.blue,
               Colors.blueGrey,
             ]),
             text: 'Gradient Button',
             textColor: Colors.white,
             onPressed: () {},
-            width: 150.0,
+            width: 250.0,
+            height: 50.0,
           ),
-          SizedBox(height: 10.0),
-          IcButton(
+          const SizedBox(height: 10.0),
+          const IcButton(
             icon: Icons.add_a_photo,
             text: "IcButton",
             buttonColor: Colors.blue,
@@ -52,18 +51,18 @@ class MyHomePage extends StatelessWidget {
             iconColor: Colors.white,
             width: 150.0,
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           SuperButton(
             text: 'Super Button',
             onPressed: () {},
-            buttonColor: Colors.red[600],
+            buttonColor: Colors.black,
             textColor: Colors.white,
-            width: 140.0,
+            width: 240.0,
+            borderRadius: 20.0,
           ),
-          SizedBox(height: 50.0),
+          const SizedBox(height: 50.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-
             children: [
               AuthButton(
                 item: SocialItem.apple,
@@ -92,14 +91,12 @@ class MyHomePage extends StatelessWidget {
               ),
               AuthButton(
                 item: SocialItem.github,
-                onPressed: () {
-                  print('fgf');
-                },
+                onPressed: () {},
                 mini: true,
               ),
             ],
           ),
-          SizedBox(height: 50.0),
+          const SizedBox(height: 50.0),
           AuthButton(
             item: SocialItem.apple,
             onPressed: () {},
@@ -118,15 +115,13 @@ class MyHomePage extends StatelessWidget {
           ),
           AuthButton(
             item: SocialItem.facebook,
-            onPressed: () {
-              print('fb');
-            },
+            onPressed: () {},
           ),
           AuthButton(
             item: SocialItem.microsoft,
             onPressed: () {},
           ),
-          CircularImageHolder(
+          const CircularImageHolder(
             imageSize: 0.5,
             imageUrl:
                 'https://i.gadgets360cdn.com/large/google_io_afp_1583296131115.jpg',

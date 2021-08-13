@@ -20,149 +20,154 @@ class GlowingStars extends StatelessWidget {
               color: Colors.white30.withAlpha(40),
             ),
           ),
-          child: _buildStarIcon(20.0),
+          child: const _StarIcon(),
         ),
-        Positioned(
+        const Positioned(
           bottom: -40.0,
           left: 0.0,
-          child: _buildStarIcon(20.0),
+          child: _StarIcon(),
         ),
-        Positioned(
+        const Positioned(
           bottom: -10.0,
           left: 10.0,
-          child: _buildStarIcon(20.0),
+          child: _StarIcon(),
         ),
         const Positioned(
           bottom: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           bottom: 10.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: 10.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: 10.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -50.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -30.0,
           top: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -10.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -20.0,
           bottom: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         //
         const Positioned(
           left: -50.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -35.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -30.0,
           top: 35.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -20.0,
           bottom: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
-        Positioned(
+        const Positioned(
           bottom: -40.0,
           left: 0.0,
-          child: _buildStarIcon(20.0),
+          child: _StarIcon(),
         ),
-        Positioned(
+        const Positioned(
           bottom: -10.0,
           left: 10.0,
-          child: _buildStarIcon(20.0),
+          child: _StarIcon(),
         ),
         const Positioned(
           bottom: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           bottom: 10.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: 10.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: 10.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -50.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           left: -30.0,
           top: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           right: -10.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           right: -20.0,
           bottom: 20.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         //
         const Positioned(
           right: -50.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           right: -35.0,
           top: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           right: -30.0,
           top: 35.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
         const Positioned(
           right: -20.0,
           bottom: 30.0,
-          child: const Bubble(size: 3.0),
+          child: Bubble(size: 3.0),
         ),
       ],
     );
   }
+}
 
-  Widget _buildStarIcon(double radius) {
+class _StarIcon extends StatelessWidget {
+  const _StarIcon();
+
+  @override
+  Widget build(BuildContext context) {
     return Icon(
       Icons.star,
       color: Colors.white30.withAlpha(40),

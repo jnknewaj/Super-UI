@@ -59,7 +59,9 @@ AuthButton(
 
 1. BillboardText : A widget to show highlighed text (Normal, Error, Warning).
 2. Bubble
-3. Glowing Stars
+3. GlowingStars
+4. EmptyWidget : To show whitespace
+5. SuperRichText : A two parted Text widget to show two different style.
 
 ![Example 5](assets/readme_images/glowing_stars.png)
 

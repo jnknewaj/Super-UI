@@ -23,7 +23,7 @@ class IcButton extends StatelessWidget {
   final Color textColor;
 
   /// Creates a button with an icon and a text.
-  IcButton({
+  const IcButton({
     required this.icon,
     required this.text,
     this.iconColor = Colors.black,
@@ -43,7 +43,7 @@ class IcButton extends StatelessWidget {
           child: Container(
             color: buttonColor,
             width: width,
-            padding: EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(5.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.min,

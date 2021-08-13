@@ -15,8 +15,6 @@ class SuperHelper {
     return File(imageFile.path);
   }
 
-  static bool isNullOrEmpty(Object o) => o == null || "" == o;
-
   static double getScreenHeight(BuildContext context) {
     return screenSize(context).height;
   }
@@ -57,8 +55,4 @@ class SuperHelper {
       return false;
     }
   }
-}
-
-extension StrX on String {
-  bool get isNullOrEmpty => this == null || isEmpty;
 }

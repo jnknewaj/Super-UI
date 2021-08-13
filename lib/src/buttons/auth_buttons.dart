@@ -45,7 +45,6 @@ class ButtonBuilder extends StatelessWidget {
     if (mini == true) {
       return Align(
         child: CircularImageHolder(
-          imageUrl: null,
           imageSize: 0.1,
           assetImagePath: imagePath,
           imageBackgroundColor: imageBackgroundColor,
@@ -56,17 +55,17 @@ class ButtonBuilder extends StatelessWidget {
     return Align(
       child: MaterialButton(
         color: color,
+        onPressed: onPressed as void Function()?,
         child: Container(
           width: width,
           height: height,
-          constraints: BoxConstraints(minWidth: 200),
+          constraints: const BoxConstraints(minWidth: 200),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 13),
                 child: CircularImageHolder(
-                  imageUrl: null,
                   imageSize: 0.07,
                   assetImagePath: imagePath,
                   imageBackgroundColor: imageBackgroundColor,
@@ -79,7 +78,6 @@ class ButtonBuilder extends StatelessWidget {
             ],
           ),
         ),
-        onPressed: onPressed as void Function()?,
       ),
     );
   }
@@ -164,7 +162,6 @@ class AuthButton extends StatelessWidget {
       case SocialItem.microsoft:
         return ButtonBuilder(
           onPressed: onPressed,
-          color: Colors.white,
           imagePath: 'assets/images/ms.png',
           text: 'Microsoft',
           height: height,

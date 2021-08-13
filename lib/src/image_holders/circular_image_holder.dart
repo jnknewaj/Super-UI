@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:super_ui/src/res/strings/super_ui_strings.dart';
+import 'package:super_ui/super_ui.dart';
 
 class CircularImageHolder extends StatelessWidget {
   /// Provide imageFile if the source of image is a file instead of url.
@@ -54,8 +55,9 @@ class CircularImageHolder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double imageSizeFactor = MediaQuery.of(context).size.width * imageSize;
-    double iconSizeFactor = imageSizeFactor * 0.2;
+    final double imageSizeFactor =
+        MediaQuery.of(context).size.width * imageSize;
+    final double iconSizeFactor = imageSizeFactor * 0.2;
     return Align(
       child: InkWell(
         onTap: onPressed as void Function()?,
@@ -83,10 +85,11 @@ class CircularImageHolder extends StatelessWidget {
                                 value: downloadProgress.progress,
                               ),
                               errorWidget: (context, url, error) =>
-                                  Icon(Icons.error),
+                                  const Icon(Icons.error),
                               fit: BoxFit.fill,
                               fadeInCurve: Curves.bounceIn,
-                              fadeInDuration: Duration(milliseconds: 1000),
+                              fadeInDuration:
+                                  const Duration(milliseconds: 1000),
                             )
                           : Image.file(
                               imageFile!,
@@ -101,25 +104,20 @@ class CircularImageHolder extends StatelessWidget {
               ),
             ),
             icon == null
-                ? Container(
-                    width: 0.0,
-                    height: 0.0,
-                  )
+                ? const EmptyWidget()
                 : Positioned(
                     bottom: 0.0,
                     right: 0.0,
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
-                        onTap: onImageAdded == null ? () {} : onImageAdded,
+                        onTap: onImageAdded ?? () {},
                         child: CircleAvatar(
                           radius: iconSizeFactor,
-                          backgroundColor: iconBackgroundColor == null
-                              ? Colors.blue[400]
-                              : iconBackgroundColor,
+                          backgroundColor: iconBackgroundColor ?? Colors.blue[400],
                           child: Icon(
                             icon,
-                            color: iconColor == null ? Colors.white : iconColor,
+                            color: iconColor ?? Colors.white,
                             size: iconSizeFactor * 0.9,
                           ),
                         ),
