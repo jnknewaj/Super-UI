@@ -138,7 +138,7 @@ packages:
       name: flutter_hooks
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.18.0"
+    version: "0.17.0"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -377,7 +377,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.8+1"
+    version: "0.0.8+2"
   synchronized:
     dependency: transitive
     description:
