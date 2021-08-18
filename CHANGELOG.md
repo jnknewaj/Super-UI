@@ -1,3 +1,7 @@
+## 0.0.8+1, August 18, 2021
+
+ * Updated dependency
+
 ## 0.0.8 , August 13, 2021
 
  * EmptyWidget

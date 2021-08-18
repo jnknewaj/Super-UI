@@ -1,6 +1,6 @@
 name: super_ui
 description: Package for commonly used custom widget like buttons, imageholder etc. Aimed to ease the development of UI.
-version: 0.0.8
+version: 0.0.8+1
 homepage: https://github.com/jnknewaj/Super-UI
 
 environment:
@@ -13,7 +13,7 @@ dependencies:
   cached_network_image: ^3.0.0
   image_picker: ^0.7.4
   shimmer: ^2.0.0
-  flutter_hooks: ^0.16.0
+  flutter_hooks: ^0.18.0
   lint: ^1.5.3
 
 dev_dependencies:
