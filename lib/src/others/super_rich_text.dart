@@ -19,16 +19,12 @@ class SuperRichText extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        style: textStyle ?? const TextStyle(color: Colors.grey),
+        style: textStyle,
         children: [
           TextSpan(text: text),
           TextSpan(
             text: richText,
-            style: richTextStyle ??
-                const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.indigo,
-                ),
+            style: richTextStyle,
           ),
         ],
       ),

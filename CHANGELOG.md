@@ -1,3 +1,7 @@
+## 0.0.8+3, August 20, 2021
+
+ * Updated SuperRichText
+
 ## 0.0.8+2, August 18, 2021
 
  * Updated dependency
