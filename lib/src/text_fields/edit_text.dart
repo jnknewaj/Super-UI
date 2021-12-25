@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 class EditText extends StatelessWidget {
   final Color? textColor;
 
+  /// Default 18.0
+  final double leftMargin;
+
+  /// Default 18.0
+  final double rightMargin;
+
+  /// Default 12.0
+  final double topMargin;
+
+  /// Default 12.0
+  final double bottomMargin;
+
   /// Default is 0
   final double borderRadius;
   final Color borderColor;
@@ -52,13 +64,21 @@ class EditText extends StatelessWidget {
     this.maxLine,
     this.textInputType = TextInputType.text,
     this.textInputAction = TextInputAction.next,
+    this.leftMargin = 18.0,
+    this.rightMargin = 18.0,
+    this.bottomMargin = 12.0,
+    this.topMargin = 12.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-          left: 18.0, right: 18.0, bottom: 12.0, top: 15.0),
+      margin: EdgeInsets.only(
+        left: leftMargin,
+        right: rightMargin,
+        bottom: bottomMargin,
+        top: topMargin,
+      ),
       child: TextFormField(
         style: TextStyle(color: textColor),
         decoration: InputDecoration(
