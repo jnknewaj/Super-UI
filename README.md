@@ -8,7 +8,7 @@ A flutter package containing a range of different widgets.
 1) add this to your pubspec.yaml file:
 ```yaml
 dependencies:
-  super_ui: ^0.0.2
+  super_ui: ^0.0.8+4
 ```
 2) Run this command:
 ```

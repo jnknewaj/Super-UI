@@ -1,3 +1,7 @@
+## 0.0.8+4, December 25, 2021
+
+ * EditText now has margin properties.
+
 ## 0.0.8+3, August 20, 2021
 
  * Updated SuperRichText
